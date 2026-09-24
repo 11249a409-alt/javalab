@@ -1,0 +1,58 @@
+EX 1(b): ARRAY + FOR LOOP + IF-ELSE + OPERATORS
+
+
+AIM:
+
+To write a Java program using an array, for loop, if-else statement, and operators to calculate the total and average of marks and determine whether each mark is Pass or Fail.
+
+
+ALGORITHM:
+
+1. Start the program.
+2. Create an integer array containing the marks.
+3. Initialize total to 0.
+4. Use a for loop to traverse through each element of the array.
+5. Add each mark to the total.
+6. Check whether the mark is greater than or equal to 50.
+7. If the mark is greater than or equal to 50, display "Pass".
+8. Otherwise, display "Fail".
+9. Calculate the average using total divided by the number of elements.
+10. Display the total and average.
+11. Stop the program.
+
+
+SOURCE CODE:
+
+public class MarksArray {
+    public static void main(String[] args) {
+
+        int[] m = {78, 91, 45, 66, 88};
+        int total = 0;
+
+        for (int i = 0; i < m.length; i++) {
+
+            total = total + m[i];
+
+            if (m[i] >= 50)
+                System.out.println(m[i] + " Pass");
+            else
+                System.out.println(m[i] + " Fail");
+        }
+
+        double avg = total / (double) m.length;
+
+        System.out.println("Total = " + total);
+        System.out.println("Average = " + avg);
+    }
+}
+
+
+OUTPUT:
+
+78 Pass
+91 Pass
+45 Fail
+66 Pass
+88 Pass
+Total = 368
+Average = 73.6
