@@ -1,3 +1,5 @@
+// Experiment 2.1: User-Defined Math Utility Package
+
 package com.scsvmv.util;
 
 public class MathUtil {
