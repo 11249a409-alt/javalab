@@ -1,3 +1,5 @@
+// Case Study 2: Fee Calculation Service
+
 package com.scsvmv.fee.service;
 
 public class FeeRule {
