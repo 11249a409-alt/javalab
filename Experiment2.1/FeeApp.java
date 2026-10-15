@@ -1,3 +1,5 @@
+// Case Study 2: Two-Package Fee Calculator
+
 import com.scsvmv.fee.model.Student;
 import com.scsvmv.fee.report.FeeReport;
 
