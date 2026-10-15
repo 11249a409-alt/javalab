@@ -1,3 +1,5 @@
+// Experiment 2.1: Package Creation and Usage
+
 import com.scsvmv.util.MathUtil;
 
 public class UseMath {
