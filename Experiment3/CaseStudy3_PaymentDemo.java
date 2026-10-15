@@ -1,0 +1,60 @@
+// Experiment 3: Case Study 3 - Payment Methods
+// Question: A college portal accepts fees through UPI, card and cash.
+// Each method has a different service charge. Use one interface,
+// three implementing classes and one loop.
+
+interface Payment {
+    double charge(double amount);
+    String name();
+}
+
+class Upi implements Payment {
+    public double charge(double a) {
+        return 0;
+    }
+
+    public String name() {
+        return "UPI";
+    }
+}
+
+class Card implements Payment {
+    public double charge(double a) {
+        return a * 0.02;
+    }
+
+    public String name() {
+        return "Card";
+    }
+}
+
+class Cash implements Payment {
+    public double charge(double a) {
+        return 20;
+    }
+
+    public String name() {
+        return "Cash";
+    }
+}
+
+class PaymentDemo {
+    public static void main(String[] args) {
+        double fee = 75000;
+        Payment[] modes = {
+            new Upi(), new Card(), new Cash()
+        };
+
+        for (Payment m : modes) {
+            System.out.printf("%-5s charge %8.2f total %10.2f%n",
+                    m.name(), m.charge(fee), fee + m.charge(fee));
+        }
+    }
+}
+
+/*
+Output:
+UPI   charge     0.00 total   75000.00
+Card  charge  1500.00 total   76500.00
+Cash  charge    20.00 total   75020.00
+*/
